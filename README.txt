@@ -1,0 +1,1 @@
+This is my BrickBuddy project. I want to create a site with similar functionality that of sites such as BrickLink. The user should be able to view various Lego sets along with their parts and be able to make an account.
