@@ -5,7 +5,10 @@ const Header = () => {
   return (
     <header className="bg-black text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-red-600">BrickBuddy</h1>
+        <h1 className="text-3xl font-bold">
+            <span className='text-red-600'>Brick</span>
+            <span className='text-yellow-400'>Buddy</span>
+        </h1>
         <nav>
           <ul className="flex space-x-4">
             <li><Link to="/" className="hover:underline">Home</Link></li>

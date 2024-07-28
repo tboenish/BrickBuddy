@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Nav';
 import HomePage from './components/HomePage';
+import ThemePage from './components/ThemePage';
 import './styles/App.css';
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <div className="container mx-auto p-4">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/theme/:themeName" element={<ThemePage />} />
         </Routes>
       </div>
     </Router>
