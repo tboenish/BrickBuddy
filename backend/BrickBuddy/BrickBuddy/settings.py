@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'catalog',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,22 @@ WSGI_APPLICATION = 'BrickBuddy.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'brickbuddy',          # The name of your database
+        'USER': 'root',  # Your existing database user
+        'PASSWORD': 'Hockey/28',   # Your existing database user's password
+        'HOST': 'localhost',           # Set to empty string for localhost
+        'PORT': '3306',                # Set to empty string for default
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
