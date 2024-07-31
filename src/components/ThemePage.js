@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LegoCard from './LegoCard';
+import { formatNames } from '../utility/formatNames';
 
 const ThemePage = () => {
   const { themeName } = useParams();
@@ -22,14 +23,14 @@ const ThemePage = () => {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen bg-gray-800 p-4'>
-      <h1 className='text-5xl font-bold mb-8 text-white'>{themeName} Sets</h1>
+      <h1 className='text-5xl font-bold mb-8 text-white'>{formatNames(themeName)} Sets</h1>
       <div className='flex flex-wrap justify-center w-full'>
         {legoSets.length > 0 ? (
           legoSets.map(set => (
             <LegoCard key={set.set_num} set={set} />
           ))
         ) : (
-          <p className='text-lg text-gray-200'>No sets found for {themeName}</p>
+          <p className='text-lg text-gray-200'>No sets found for {formatNames(themeName)}</p>
         )}
       </div>
     </div>

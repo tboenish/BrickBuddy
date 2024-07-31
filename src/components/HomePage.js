@@ -18,10 +18,21 @@ const HomePage = () => {
         <h2 className='text-3xl font-bold mb-4 text-center text-white'>Find Sets by Theme</h2>
         <p className='text-lg text-gray-200 mb-8 text-center'>Browse through our catalog by your favorite theme</p>
         <div className='overflow-x-auto whitespace-nowrap'>
-            <Link to="/theme/starwars">
+            <Link to="/theme/star-wars">
             <div className='inline-block bg-gray-600 text-white p-4 rounded-lg m-2 hover:bg-black'>
                 <h3 className='text-xl font-semibold'>Star Wars</h3>
+            </div>
+            </Link>
 
+            <Link to="/theme/city">
+            <div className='inline-block bg-gray-600 text-white p-4 rounded-lg m-2 hover:bg-black'>
+                <h3 className='text-xl font-semibold'>City</h3>
+            </div>
+            </Link>
+
+            <Link to="/theme/technic">
+            <div className='inline-block bg-gray-600 text-white p-4 rounded-lg m-2 hover:bg-black'>
+                <h3 className='text-xl font-semibold'>Technic</h3>
             </div>
             </Link>
                 
