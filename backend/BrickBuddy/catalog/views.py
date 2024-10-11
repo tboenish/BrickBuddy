@@ -49,13 +49,6 @@ themeMap={
     'technic':1,
 
 
-
-
-
-
-
-
-
     
 
 }
