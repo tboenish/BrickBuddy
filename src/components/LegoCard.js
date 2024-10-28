@@ -1,5 +1,5 @@
 import React from 'react';
-
+//LegoCard component that displays the below information about a Lego Set in the format defined below
 const LegoCard = ({ set }) => {
   return (
     <div className='bg-gray-700 text-white p-4 rounded-lg m-2 flex flex-col items-center w-1/5'>
