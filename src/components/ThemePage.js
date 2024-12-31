@@ -34,8 +34,8 @@ const ThemePage = () => {
           legoSets.map(set => (//Iterate over the array and genearte a lego card for that set
             <LegoCard key={set.set_num} set={set} />
           ))
-        ) : (//No sets found
-          <p className='text-lg text-gray-200'>No sets found for {formatNames(themeName)}</p>
+        ) : (
+          <p className='text-lg text-gray-200'>Loading.....</p>
         )}
       </div>
     </div>

@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <Header />
       <div className="container mx-auto p-4">
-        <Routes> {/*Route for the homepage and the theme page(s)*/}
+        <Routes> {/*Routes for the pages */}
           <Route path="/" element={<HomePage />} />
           <Route path="/theme/:themeName" element={<ThemePage />} />
           <Route path ="/login" element = {<Login />} />

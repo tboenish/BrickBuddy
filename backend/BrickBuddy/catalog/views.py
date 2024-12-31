@@ -20,18 +20,22 @@ themeMap={
 
 #Function for returning sets to the user filtered by theme and date
 def fetchSetByTheme(request, theme_name):
+    if theme_name not in themeMap:
+        return JsonResponse({"Error": "Theme not found"},status =404)
+    
     year = date.today().year#Get the current date
 
-    themeID= themeMap.get(theme_name.lower())#Get the theme ID which is the ID passed in the featch request
-
-    if not themeID:#Return this error if the them cannot be found
-        return JsonResponse({"Error": "Theme not found"},status=404)
+    themeID = themeMap[theme_name] #Get the theme ID which is the ID passed in the featch request
     
     #Use the url for Rebrickable API passing the key and the themeID to return the data
     url = f'https://rebrickable.com/api/v3/lego/sets/?key={apiKey}&page_size=40&theme_id={themeID}&min_year={year}&max_year={year}&min_parts=10&ordering=-num_parts'
-    response = requests.get(url)#Get request to the API
-    data = response.json()
-    return JsonResponse(data)#Return the response as a JSON object
+    try:
+        response = requests.get(url)#Get request to the API
+        data = response.json()
+        return JsonResponse(data)
+    except requests.exceptions.RequestException as e:
+        return JsonResponse({"Error": f"API Request Failed: {str(e)}" },status = 500)
+
 
  
     
