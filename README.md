@@ -11,5 +11,4 @@ Current Features:
 Browse sets by theme - Browse Lego sets sorted by theme displaying some basic information about the sets such as piece count and release date
 
 Planned Features:
-User login
-Allow users to create lists of sets they want / own
+User login and allow users to create lists of sets they want / own
