@@ -19,7 +19,7 @@ themeMap={
 }
 
 #Function for returning sets to the user filtered by theme and date
-def fetchSetByTheme(request, theme_name):
+def fetchSetByTheme(request,theme_name):
     if theme_name not in themeMap:
         return JsonResponse({"Error": "Theme not found"},status =404)
     
