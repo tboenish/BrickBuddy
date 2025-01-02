@@ -8,6 +8,7 @@ import Header from './components/Nav';
 import HomePage from './components/HomePage';
 import ThemePage from './components/ThemePage';
 import Login from './components/Login';
+import SignUp from './components/SignUp';
 import './styles/App.css';
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/theme/:themeName" element={<ThemePage />} />
           <Route path ="/login" element = {<Login />} />
+          <Route path = "/signup" element = {<SignUp />} />
         </Routes>
       </div>
     </Router>

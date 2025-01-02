@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Login = () =>
 {
 
@@ -56,6 +57,7 @@ const Login = () =>
             >
               Login
             </button>
+            <p>Not a member? Click <Link to = "/signup" className = 'hover:underline'>Here</Link></p>
           </form>
         </div>
       );  
